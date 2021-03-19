@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import api from "../../services/api";
 
 import SiderPurchase from "../../components/SiderPurchase";
@@ -75,17 +75,23 @@ const Explore = () => {
   const [loading, setLoading] = useState<Boolean>(false);
 
   // sideFilter Bar
-  const [filterYear, setFilterYear] = useState<Array<string>>();
+  const [filterYear, setFilterYear] = useState<any[]>([]);
   const [filterMakes, setFilterMakes] = useState<Array<string>>();
   const [filterModels, setFilterModels] = useState<Array<string>>();
   const [filterExtColor, setFilterExtColor] = useState<Array<string>>();
   const [filterIntColor, setFilterIntColor] = useState<Array<string>>();
   const [filterCylinders, setFilterCylinders] = useState<Array<string>>();
-  const [filterDisplacements, setFilterDisplacements] = useState<Array<string>>();
+  const [filterDisplacements, setFilterDisplacements] = useState<
+    Array<string>
+  >();
   const [filterTransmission, setFilterTransmission] = useState<Array<string>>();
   const [filterInterior, setFilterInterior] = useState<Array<string>>();
-  const [filterSeatingTextiles, setFilterSeatingTextiles] = useState<Array<string>>();
-  const [filterSeatingCapacities,setFilterSeatingCapacities] = useState<Array<string>>();
+  const [filterSeatingTextiles, setFilterSeatingTextiles] = useState<
+    Array<string>
+  >();
+  const [filterSeatingCapacities, setFilterSeatingCapacities] = useState<
+    Array<string>
+  >();
   const [filterSeatsDriver, setFilterSeatsDriver] = useState<Array<string>>();
   const [filterSeatsFronts, setFilterSeatsFronts] = useState<Array<string>>();
   const [filterSeatsPass, setFilterSeatsPass] = useState<Array<string>>();
@@ -119,41 +125,98 @@ const Explore = () => {
 
   // array de filter
 
-  var yearArr = new Array<string>()
-  var makeArr = new Array<string>()
-  var modelArr = new Array<string>()
-  var extColorArr = new Array<string>()
-  var intColorArr = new Array<string>()
-  var cylinderArr = new Array<string>()
-  var displacementArr = new Array<string>()
-  var transmissionArr = new Array<string>()
-  var interiorArr = new Array<string>()
-  var sTextilesArr = new Array<string>()
-  var sCapacitiesArr = new Array<string>()
-  var sDriverArr = new Array<string>()
-  var sFrontArr = new Array<string>()
-  var sPassArr = new Array<string>()
-  var drivetrainArr = new Array<string>()
-  var moonroofArr = new Array<string>()
+  var yearArr = new Array<string>("");
+  var makeArr = new Array<string>();
+  var modelArr = new Array<string>();
+  var extColorArr = new Array<string>();
+  var intColorArr = new Array<string>();
+  var cylinderArr = new Array<string>();
+  var displacementArr = new Array<string>();
+  var transmissionArr = new Array<string>();
+  var interiorArr = new Array<string>();
+  var sTextilesArr = new Array<string>();
+  var sCapacitiesArr = new Array<string>();
+  var sDriverArr = new Array<string>();
+  var sFrontArr = new Array<string>();
+  var sPassArr = new Array<string>();
+  var drivetrainArr = new Array<string>();
+  var moonroofArr = new Array<string>();
 
-// callback
+  // callback
+  const callbackYear = useCallback(
+    (value) => {
+      const checkItem = filterYear.some((item) => item === value);
+
+      if (!checkItem) {
+        setFilterYear((filterYear) => [...filterYear, value]);
+      }
+
+      console.log(filterYear);
+    },
+    [filterYear]
+  );
+
   const callbackPai = (value: string) => setRangeValue(value);
-  const callbackYear = (value: string) => { yearArr.push(value); setFilterYear(yearArr)};
-  const callbackMake = (value: string) => { makeArr.push(value); setFilterMakes(makeArr)};
-  const callbackModel = (value: string) => { modelArr.push(value); setFilterModels(modelArr)};
-  const callbackExtColor = (value: string) => { extColorArr.push(value); setFilterExtColor(extColorArr)};
-  const callbackIntColor = (value: string) => { intColorArr.push(value); setFilterIntColor(intColorArr)};
-  const callbackCylinder = (value: string) => { cylinderArr.push(value); setFilterCylinders(cylinderArr)};
-  const callbackDisplacement = (value: string) => { displacementArr.push(value); setFilterDisplacements(displacementArr)};
-  const callbackTransmission = (value: string) => { transmissionArr.push(value); setFilterTransmission(transmissionArr)};
-  const callbackInterior = (value: string) => { interiorArr.push(value); setFilterInterior(interiorArr)};
-  const callbackSTextiles = (value: string) => { sTextilesArr.push(value); setFilterSeatingTextiles(sTextilesArr)};
-  const callbackSCapacities = (value: string) => { sCapacitiesArr.push(value); setFilterSeatingCapacities(sCapacitiesArr)};
-  const callbackSDriver = (value: string) => { sDriverArr.push(value); setFilterSeatsDriver(sDriverArr)};
-  const callbackSFront = (value: string) => { sFrontArr.push(value); setFilterSeatsFronts(sFrontArr)};
-  const callbackSPass = (value: string) => { sPassArr.push(value); setFilterSeatsPass(sPassArr)};
-  const callbackDTrain = (value: string) => { drivetrainArr.push(value); setFilterDriveTrain(drivetrainArr)};
-  const callbackMoonroof = (value: string) => { moonroofArr.push(value); setFilterMoonroof(moonroofArr)};
+  const callbackMake = (value: string) => {
+    makeArr.push(value);
+    setFilterMakes(makeArr);
+  };
+  const callbackModel = (value: string) => {
+    modelArr.push(value);
+    setFilterModels(modelArr);
+  };
+  const callbackExtColor = (value: string) => {
+    extColorArr.push(value);
+    setFilterExtColor(extColorArr);
+  };
+  const callbackIntColor = (value: string) => {
+    intColorArr.push(value);
+    setFilterIntColor(intColorArr);
+  };
+  const callbackCylinder = (value: string) => {
+    cylinderArr.push(value);
+    setFilterCylinders(cylinderArr);
+  };
+  const callbackDisplacement = (value: string) => {
+    displacementArr.push(value);
+    setFilterDisplacements(displacementArr);
+  };
+  const callbackTransmission = (value: string) => {
+    transmissionArr.push(value);
+    setFilterTransmission(transmissionArr);
+  };
+  const callbackInterior = (value: string) => {
+    interiorArr.push(value);
+    setFilterInterior(interiorArr);
+  };
+  const callbackSTextiles = (value: string) => {
+    sTextilesArr.push(value);
+    setFilterSeatingTextiles(sTextilesArr);
+  };
+  const callbackSCapacities = (value: string) => {
+    sCapacitiesArr.push(value);
+    setFilterSeatingCapacities(sCapacitiesArr);
+  };
+  const callbackSDriver = (value: string) => {
+    sDriverArr.push(value);
+    setFilterSeatsDriver(sDriverArr);
+  };
+  const callbackSFront = (value: string) => {
+    sFrontArr.push(value);
+    setFilterSeatsFronts(sFrontArr);
+  };
+  const callbackSPass = (value: string) => {
+    sPassArr.push(value);
+    setFilterSeatsPass(sPassArr);
+  };
+  const callbackDTrain = (value: string) => {
+    drivetrainArr.push(value);
+    setFilterDriveTrain(drivetrainArr);
+  };
+  const callbackMoonroof = (value: string) => {
+    moonroofArr.push(value);
+    setFilterMoonroof(moonroofArr);
+  };
 
   useEffect(() => {
     if (leaseToFinanceState) {
@@ -238,14 +301,14 @@ const Explore = () => {
   console.log(filterSeatsDriver);
   console.log(filterSeatsFronts);
   console.log(filterSeatsPass);
-  console.log(filterDriveTrain)
+  console.log(filterDriveTrain);
   console.log(filterMoonroof);
 
   console.log(rangeValue);
 
   return (
     <Container>
-      <button onClick={()=> console.log(yearArr)}>aqui</button>
+      <button onClick={() => console.log(yearArr)}>aqui</button>
       <Sider>
         <SiderPurchase
           cashMin={cashMin}
@@ -279,7 +342,7 @@ const Explore = () => {
         <SiderFilter
           OnChangeYears={callbackYear}
           OnChangeModels={callbackMake}
-          OnChangeMakes={callbackModel }
+          OnChangeMakes={callbackModel}
           OnChangeExtColor={callbackExtColor}
           OnChangeIntColor={callbackIntColor}
           OnChangeCylinders={callbackCylinder}
@@ -293,22 +356,22 @@ const Explore = () => {
           OnChangeSeatsPass={callbackSPass}
           OnChangeDriveTrain={callbackDTrain}
           OnChangeMoonroof={callbackMoonroof}
-          years={' '}
-          makes={''}
-          models={''}
-          extColor={''}
-          intColor={''}
-          cylinders={''}
-          transmissions={''}
-          interior={''}
-          seatingTextiles={''}
-          seatsCapacities={''}
-          seatsDrivers={''}
-          seatsFronts={''}
-          seatsPass={''}
-          driveTrain={''}
-          moonroof={''}
-          displaciments={''}
+          years={" "}
+          makes={""}
+          models={""}
+          extColor={""}
+          intColor={""}
+          cylinders={""}
+          transmissions={""}
+          interior={""}
+          seatingTextiles={""}
+          seatsCapacities={""}
+          seatsDrivers={""}
+          seatsFronts={""}
+          seatsPass={""}
+          driveTrain={""}
+          moonroof={""}
+          displaciments={""}
         />
       </Sider>
       <GridContainer>
@@ -429,11 +492,11 @@ const Explore = () => {
                     vehicleYear={vehicle.year}
                     valueDown={rangeValue}
                     valueMpy={mileage}
-                    valueMonthLease={vehicle.lease ? vehicle.lease.payment : ''}
+                    valueMonthLease={vehicle.lease ? vehicle.lease.payment : ""}
                     valueMonthFinance={
-                      vehicle.finance ? vehicle.finance.payment : ''
+                      vehicle.finance ? vehicle.finance.payment : ""
                     }
-                    valueSavings='2350.00'
+                    valueSavings="2350.00"
                     vechileName={`${vehicle.make} ${vehicle.model}`}
                     imgVechile={vehicle?.image?.url || genericCar}
                     leaseToFinance={leaseToFinanceState}

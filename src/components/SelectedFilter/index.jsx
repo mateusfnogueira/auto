@@ -1,5 +1,5 @@
-import CancelIcon from '@material-ui/icons/Cancel';
-import { Container, Selected, Tag, TagValue, Clear } from './styles';
+import CancelIcon from "@material-ui/icons/Cancel";
+import { Container, Selected, Tag, TagValue, Clear } from "./styles";
 
 const SelectedFilter = ({
   make,
@@ -9,7 +9,7 @@ const SelectedFilter = ({
   model,
   clearModel,
   intColor,
-  clearIntColor, 
+  clearIntColor,
   extColor,
   clearExtColor,
   cylinder,
@@ -34,36 +34,36 @@ const SelectedFilter = ({
   clearMoonroof,
   displaciment,
   clearDisplaciment,
-  clearAll
+  clearAll,
 }) => {
   return (
     <Container>
       <Selected>
-        {year !== '' ? (
+        {year?.map((item) => (
           <Tag>
             <TagValue
               style={{
-                fontSize: '12px',
+                fontSize: "12px",
               }}
             >
-              {year}
+              {item}
             </TagValue>
             <CancelIcon
               onClick={clearYear}
               style={{
                 fontSize: 16,
-                color: '#fd385b',
+                color: "#fd385b",
                 marginLeft: 3,
               }}
             />
           </Tag>
-        ) : null}
+        ))}
 
-        {make !== '' ? (
+        {/* {make !== "" ? (
           <Tag>
             <TagValue
               style={{
-                fontSize: '12px',
+                fontSize: "12px",
               }}
             >
               {make}
@@ -72,17 +72,17 @@ const SelectedFilter = ({
               onClick={clearMake}
               style={{
                 fontSize: 16,
-                color: '#fd385b',
+                color: "#fd385b",
                 marginLeft: 3,
               }}
             />
           </Tag>
         ) : null}
-        {model !== '' ? (
+        {model !== "" ? (
           <Tag>
             <TagValue
               style={{
-                fontSize: '12px',
+                fontSize: "12px",
               }}
             >
               {model}
@@ -91,18 +91,18 @@ const SelectedFilter = ({
               onClick={clearModel}
               style={{
                 fontSize: 16,
-                color: '#fd385b',
+                color: "#fd385b",
                 marginLeft: 3,
               }}
             />
           </Tag>
         ) : null}
 
-        {intColor !== '' ? (
+        {intColor !== "" ? (
           <Tag>
             <TagValue
               style={{
-                fontSize: '12px',
+                fontSize: "12px",
               }}
             >
               {intColor}
@@ -111,18 +111,18 @@ const SelectedFilter = ({
               onClick={clearIntColor}
               style={{
                 fontSize: 16,
-                color: '#fd385b',
+                color: "#fd385b",
                 marginLeft: 3,
               }}
             />
           </Tag>
         ) : null}
 
-        {extColor !== '' ? (
+        {extColor !== "" ? (
           <Tag>
             <TagValue
               style={{
-                fontSize: '12px',
+                fontSize: "12px",
               }}
             >
               {extColor}
@@ -131,18 +131,18 @@ const SelectedFilter = ({
               onClick={clearExtColor}
               style={{
                 fontSize: 16,
-                color: '#fd385b',
+                color: "#fd385b",
                 marginLeft: 3,
               }}
             />
           </Tag>
         ) : null}
 
-        {cylinder !== '' ? (
+        {cylinder !== "" ? (
           <Tag>
             <TagValue
               style={{
-                fontSize: '12px',
+                fontSize: "12px",
               }}
             >
               {cylinder}
@@ -151,18 +151,18 @@ const SelectedFilter = ({
               onClick={clearCylinder}
               style={{
                 fontSize: 16,
-                color: '#fd385b',
+                color: "#fd385b",
                 marginLeft: 3,
               }}
             />
           </Tag>
         ) : null}
 
-        {transmission !== '' ? (
+        {transmission !== "" ? (
           <Tag>
             <TagValue
               style={{
-                fontSize: '12px',
+                fontSize: "12px",
               }}
             >
               {transmission}
@@ -171,18 +171,18 @@ const SelectedFilter = ({
               onClick={clearTransmission}
               style={{
                 fontSize: 16,
-                color: '#fd385b',
+                color: "#fd385b",
                 marginLeft: 3,
               }}
             />
           </Tag>
         ) : null}
 
-        {interior !== '' ? (
+        {interior !== "" ? (
           <Tag>
             <TagValue
               style={{
-                fontSize: '12px',
+                fontSize: "12px",
               }}
             >
               {interior}
@@ -191,18 +191,18 @@ const SelectedFilter = ({
               onClick={clearInterior}
               style={{
                 fontSize: 16,
-                color: '#fd385b',
+                color: "#fd385b",
                 marginLeft: 3,
               }}
             />
           </Tag>
         ) : null}
 
-        {seatingTextiles !== '' ? (
+        {seatingTextiles !== "" ? (
           <Tag>
             <TagValue
               style={{
-                fontSize: '12px',
+                fontSize: "12px",
               }}
             >
               {seatingTextiles}
@@ -211,18 +211,18 @@ const SelectedFilter = ({
               onClick={clearSTextiles}
               style={{
                 fontSize: 16,
-                color: '#fd385b',
+                color: "#fd385b",
                 marginLeft: 3,
               }}
             />
           </Tag>
         ) : null}
 
-        {seatsCapacities !== '' ? (
+        {seatsCapacities !== "" ? (
           <Tag>
             <TagValue
               style={{
-                fontSize: '12px',
+                fontSize: "12px",
               }}
             >
               {seatsCapacities}
@@ -231,18 +231,18 @@ const SelectedFilter = ({
               onClick={clearSCapacities}
               style={{
                 fontSize: 16,
-                color: '#fd385b',
+                color: "#fd385b",
                 marginLeft: 3,
               }}
             />
           </Tag>
         ) : null}
 
-        {seatsDriver !== '' ? (
+        {seatsDriver !== "" ? (
           <Tag>
             <TagValue
               style={{
-                fontSize: '12px',
+                fontSize: "12px",
               }}
             >
               {seatsDriver}
@@ -251,18 +251,18 @@ const SelectedFilter = ({
               onClick={clearSDriver}
               style={{
                 fontSize: 16,
-                color: '#fd385b',
+                color: "#fd385b",
                 marginLeft: 3,
               }}
             />
           </Tag>
         ) : null}
 
-        {seatsFronts !== '' ? (
+        {seatsFronts !== "" ? (
           <Tag>
             <TagValue
               style={{
-                fontSize: '12px',
+                fontSize: "12px",
               }}
             >
               {seatsFronts}
@@ -271,18 +271,18 @@ const SelectedFilter = ({
               onClick={clearSFronts}
               style={{
                 fontSize: 16,
-                color: '#fd385b',
+                color: "#fd385b",
                 marginLeft: 3,
               }}
             />
           </Tag>
         ) : null}
 
-        {seatsPass !== '' ? (
+        {seatsPass !== "" ? (
           <Tag>
             <TagValue
               style={{
-                fontSize: '12px',
+                fontSize: "12px",
               }}
             >
               {seatsPass}
@@ -291,18 +291,18 @@ const SelectedFilter = ({
               onClick={clearSPass}
               style={{
                 fontSize: 16,
-                color: '#fd385b',
+                color: "#fd385b",
                 marginLeft: 3,
               }}
             />
           </Tag>
         ) : null}
 
-        {driveTrain !== '' ? (
+        {driveTrain !== "" ? (
           <Tag>
             <TagValue
               style={{
-                fontSize: '12px',
+                fontSize: "12px",
               }}
             >
               {driveTrain}
@@ -311,18 +311,18 @@ const SelectedFilter = ({
               onClick={clearDriveTrain}
               style={{
                 fontSize: 16,
-                color: '#fd385b',
+                color: "#fd385b",
                 marginLeft: 3,
               }}
             />
           </Tag>
         ) : null}
 
-        {moonroof !== '' ? (
+        {moonroof !== "" ? (
           <Tag>
             <TagValue
               style={{
-                fontSize: '12px',
+                fontSize: "12px",
               }}
             >
               {moonroof}
@@ -331,18 +331,18 @@ const SelectedFilter = ({
               onClick={clearMoonroof}
               style={{
                 fontSize: 16,
-                color: '#fd385b',
+                color: "#fd385b",
                 marginLeft: 3,
               }}
             />
           </Tag>
         ) : null}
 
-        {displaciment !== '' ? (
+        {displaciment !== "" ? (
           <Tag>
             <TagValue
               style={{
-                fontSize: '12px',
+                fontSize: "12px",
               }}
             >
               {displaciment}
@@ -351,12 +351,12 @@ const SelectedFilter = ({
               onClick={clearDisplaciment}
               style={{
                 fontSize: 16,
-                color: '#fd385b',
+                color: "#fd385b",
                 marginLeft: 3,
               }}
             />
           </Tag>
-        ) : null}
+        ) : null} */}
       </Selected>
       <Clear onClick={clearAll}>Clear all</Clear>
     </Container>

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 interface CalculatorType {
   pos: string;
@@ -31,10 +31,12 @@ export const ProductSection = styled.div`
 `;
 
 export const Calculator = styled.div<CalculatorType>`
-  position: ${(props) => props.pos};
-  right: ${(props) => (props.pos === "absolute" ? "-5px" : "15px")};
-  ${(props) => (props.pos === "absolute" ? "bottom: -780px;" : "")}
-  width: ${(props) => (props.pos === "absolute" ? "28.7%" : "28%")};
+  position: ${props => props.pos};
+  right: ${props =>
+    props.pos === 'absolute' ? '-5px' : '15px'};
+  ${props => (props.pos === 'absolute' ? 'bottom: -780px;' : '')}
+  width: ${props =>
+    props.pos === 'absolute' ? '28.7%' : '28%'};
   display: flex;
   flex-direction: column;
   justify-content: center;

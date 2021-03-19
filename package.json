@@ -55,3 +55,5 @@
       "antd": "^4.13.0"
     }
 }
+
+// yarn add -D @typescript-eslint/eslint-plugin eslint eslint-config-airbnb eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier

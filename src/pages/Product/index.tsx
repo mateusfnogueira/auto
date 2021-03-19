@@ -1,26 +1,26 @@
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import React, { useState, useEffect } from "react";
-import { Carousel } from "react-responsive-carousel";
-import api from "../../services/api";
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import React, { useState, useEffect } from 'react';
+import { Carousel } from 'react-responsive-carousel';
 
-import { useParams } from "react-router-dom";
+import { useParams } from 'react-router-dom';
 
-import { withStyles } from "@material-ui/core/styles";
-import { Slider } from "@material-ui/core";
+import { withStyles } from '@material-ui/core/styles';
+import { Slider } from '@material-ui/core';
 
-import PlayArrowRoundedIcon from "@material-ui/icons/PlayArrowRounded";
-import FlipCameraAndroidRoundedIcon from "@material-ui/icons/FlipCameraAndroidRounded";
-import PhotoLibraryRoundedIcon from "@material-ui/icons/PhotoLibraryRounded";
-import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
-import AddIcon from "@material-ui/icons/Add";
-import RemoveIcon from "@material-ui/icons/Remove";
+import PlayArrowRoundedIcon from '@material-ui/icons/PlayArrowRounded';
+import FlipCameraAndroidRoundedIcon from '@material-ui/icons/FlipCameraAndroidRounded';
+import PhotoLibraryRoundedIcon from '@material-ui/icons/PhotoLibraryRounded';
+import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
+import AddIcon from '@material-ui/icons/Add';
+import RemoveIcon from '@material-ui/icons/Remove';
 
-import Tab from "@material-ui/core/Tab";
-import TabContext from "@material-ui/lab/TabContext";
-import TabList from "@material-ui/lab/TabList";
-import TabPanel from "@material-ui/lab/TabPanel";
+import Tab from '@material-ui/core/Tab';
+import TabContext from '@material-ui/lab/TabContext';
+import TabList from '@material-ui/lab/TabList';
+import TabPanel from '@material-ui/lab/TabPanel';
 
-import SettingsIcon from "@material-ui/icons/Settings";
+import SettingsIcon from '@material-ui/icons/Settings';
+import api from '../../services/api';
 
 import {
   Container,
@@ -55,8 +55,8 @@ import {
   FeaturesText,
   RebatesSpot,
   AlsoViewed,
-} from "./styles";
-import "./styles.css";
+} from './styles';
+import './styles.css';
 
 interface ParamTypes {
   VIN: string;
@@ -117,44 +117,46 @@ interface Vehicle {
 
 const CashDownSlider = withStyles({
   root: {
-    width: "100%",
+    width: '100%',
     height: 8,
     marginTop: 20,
-    "& @media only screen and (max-width: 320px)": {
-      width: "80%",
+    '& @media only screen and (max-width: 320px)': {
+      width: '80%',
     },
   },
   thumb: {
     height: 15,
     width: 15,
-    backgroundColor: "#fff",
-    boxShadow: "0 2px 5px 0 rgba(0 0 0 / 15%)",
+    backgroundColor: '#fff',
+    boxShadow: '0 2px 5px 0 rgba(0 0 0 / 15%)',
     marginTop: -6,
     marginLeft: -7.5,
-    "&:focus, &:hover, &$active": {
-      boxShadow: "0 2px 5px 0 rgba(0 0 0 / 20%)",
-      "@media (hover: none)": {
-        boxShadow: "0 2px 5px 0 rgba(0 0 0 / 15%)",
+    '&:focus, &:hover, &$active': {
+      boxShadow: '0 2px 5px 0 rgba(0 0 0 / 20%)',
+      '@media (hover: none)': {
+        boxShadow: '0 2px 5px 0 rgba(0 0 0 / 15%)',
       },
     },
   },
   active: {},
   valueLabel: {
-    left: "calc(-50% + -5px)",
+    left: 'calc(-50% + -5px)',
     top: -20,
-    "& *": {
-      background: "transparent",
-      color: "#5e5e5e",
+    '& *': {
+      background: 'transparent',
+      color: '#5e5e5e',
       fontSize: 13,
     },
   },
   track: {
-    backgroundImage: "linear-gradient(to left, #1DEEA1, #1492e6)",
+    backgroundImage:
+      'linear-gradient(to left, #1DEEA1, #1492e6)',
     height: 5,
     borderRadius: 50,
   },
   rail: {
-    backgroundImage: "linear-gradient(to left, #1DEEA1, #1492e6)",
+    backgroundImage:
+      'linear-gradient(to left, #1DEEA1, #1492e6)',
     height: 5,
     borderRadius: 50,
   },
@@ -164,9 +166,9 @@ const SingleProduct = () => {
   const { VIN } = useParams<ParamTypes>();
 
   const [vehicle, setVehicle] = useState<Vehicle>();
-  const [rangeValue, setRangeValue] = useState<string>("");
-  const [position, setPosition] = useState<string>("fixed");
-  const [tab, setTab] = useState<string>("1");
+  const [rangeValue, setRangeValue] = useState<string>('');
+  const [position, setPosition] = useState<string>('fixed');
+  const [tab, setTab] = useState<string>('1');
 
   console.error(rangeValue);
 
@@ -175,8 +177,8 @@ const SingleProduct = () => {
   };
 
   const valuetext = (value: any) => {
-    setRangeValue("$" + value);
-    return "$" + value;
+    setRangeValue('$' + value);
+    return '$' + value;
   };
 
   useEffect(() => {
@@ -189,9 +191,9 @@ const SingleProduct = () => {
 
     window.onscroll = () => {
       if (window.pageYOffset > 688) {
-        setPosition("absolute");
+        setPosition('absolute');
       } else if (window.pageYOffset < 688) {
-        setPosition("fixed");
+        setPosition('fixed');
       }
     };
 
@@ -206,27 +208,43 @@ const SingleProduct = () => {
             <Title>
               <strong>2021</strong> ILX Base
             </Title>
-            <Description>2.4L 4 CYLINDER 8 SPEED DUAL CLUTCH</Description>
+            <Description>
+              2.4L 4 CYLINDER 8 SPEED DUAL CLUTCH
+            </Description>
             <Price>
               <strong>MSRP:</strong> $23,400
             </Price>
           </TitleSection>
-          <Carousel showArrows={false} showThumbs={false} showStatus={false}>
+          <Carousel
+            showArrows={false}
+            showThumbs={false}
+            showStatus={false}
+          >
             <ImageSection>
               <Image
-                src={vehicle?.image.url ? vehicle?.image.url : ""}
+                src={
+                  vehicle?.image.url ? vehicle?.image.url : ''
+                }
                 alt=""
               />
             </ImageSection>
             <ImageSection>
               <Image
-                src={vehicle?.image.url_side ? vehicle?.image.url_side : ""}
+                src={
+                  vehicle?.image.url_side
+                    ? vehicle?.image.url_side
+                    : ''
+                }
                 alt=""
               />
             </ImageSection>
             <ImageSection>
               <Image
-                src={vehicle?.image.url_back ? vehicle?.image.url_back : ""}
+                src={
+                  vehicle?.image.url_back
+                    ? vehicle?.image.url_back
+                    : ''
+                }
                 alt=""
               />
             </ImageSection>
@@ -235,11 +253,11 @@ const SingleProduct = () => {
             <Videos>
               <PlayArrowRoundedIcon
                 style={{
-                  backgroundColor: "white",
+                  backgroundColor: 'white',
                   borderRadius: 50,
-                  boxShadow: "0 2px 5px 0 rgba(0 0 0 /10%)",
+                  boxShadow: '0 2px 5px 0 rgba(0 0 0 /10%)',
                   marginRight: 10,
-                  color: "#1492e6",
+                  color: '#1492e6',
                   padding: 3,
                   fontSize: 25,
                 }}
@@ -249,11 +267,11 @@ const SingleProduct = () => {
             <Rotation>
               <FlipCameraAndroidRoundedIcon
                 style={{
-                  backgroundColor: "white",
+                  backgroundColor: 'white',
                   borderRadius: 50,
-                  boxShadow: "0 2px 5px 0 rgba(0 0 0 /10%)",
+                  boxShadow: '0 2px 5px 0 rgba(0 0 0 /10%)',
                   marginRight: 10,
-                  color: "#1492e6",
+                  color: '#1492e6',
                   padding: 3,
                   fontSize: 25,
                 }}
@@ -263,11 +281,11 @@ const SingleProduct = () => {
             <Gallery>
               <PhotoLibraryRoundedIcon
                 style={{
-                  backgroundColor: "white",
+                  backgroundColor: 'white',
                   borderRadius: 50,
-                  boxShadow: "0 2px 5px 0 rgba(0 0 0 /10%)",
+                  boxShadow: '0 2px 5px 0 rgba(0 0 0 /10%)',
                   marginRight: 10,
-                  color: "#1492e6",
+                  color: '#1492e6',
                   padding: 3,
                   fontSize: 25,
                 }}
@@ -276,15 +294,18 @@ const SingleProduct = () => {
             </Gallery>
           </Actions>
           <Colors>
-            <ColorDot style={{ backgroundColor: "red" }} />
-            <ColorDot style={{ backgroundColor: "red" }} />
-            <ColorDot style={{ backgroundColor: "red" }} />
+            <ColorDot style={{ backgroundColor: 'red' }} />
+            <ColorDot style={{ backgroundColor: 'red' }} />
+            <ColorDot style={{ backgroundColor: 'red' }} />
           </Colors>
         </Product>
         <Calculator className="calculator" pos={position}>
           <div className="toggleButton">
             <label className="switchToggle">
-              <input className="leaseIn buttonToggle" type="checkbox" />
+              <input
+                className="leaseIn buttonToggle"
+                type="checkbox"
+              />
               <span className="lease"></span>
             </label>
           </div>
@@ -294,9 +315,13 @@ const SingleProduct = () => {
           /> */}
           <Payment>${vehicle?.lease.payment}/mo.</Payment>
           <Fees>
-            Including fees {"&"} Taxes{" "}
+            Including fees {'&'} Taxes{' '}
             <InfoOutlinedIcon
-              style={{ fontSize: 20, color: "#1492e6", marginLeft: 5 }}
+              style={{
+                fontSize: 20,
+                color: '#1492e6',
+                marginLeft: 5,
+              }}
             />
           </Fees>
           <Label>Lease Term</Label>
@@ -325,9 +350,9 @@ const SingleProduct = () => {
             <RemoveIcon
               style={{
                 fontSize: 17,
-                color: "#5e5e5e",
+                color: '#5e5e5e',
                 borderRadius: 50,
-                boxShadow: "0 2px 5px 0 rgba(0 0 0 / 15%)",
+                boxShadow: '0 2px 5px 0 rgba(0 0 0 / 15%)',
                 marginTop: 15,
                 marginRight: 10,
                 opacity: 0.5,
@@ -346,9 +371,9 @@ const SingleProduct = () => {
             <AddIcon
               style={{
                 fontSize: 17,
-                color: "#5e5e5e",
+                color: '#5e5e5e',
                 borderRadius: 50,
-                boxShadow: "0 2px 5px 0 rgba(0 0 0 / 20%)",
+                boxShadow: '0 2px 5px 0 rgba(0 0 0 / 20%)',
                 marginTop: 15,
                 marginLeft: 10,
                 opacity: 0.5,
@@ -359,9 +384,9 @@ const SingleProduct = () => {
             <AddIcon
               style={{
                 fontSize: 15,
-                color: "#5e5e5e",
+                color: '#5e5e5e',
                 borderRadius: 50,
-                boxShadow: "0 2px 5px 0 rgba(0 0 0 / 20%)",
+                boxShadow: '0 2px 5px 0 rgba(0 0 0 / 20%)',
                 marginRight: 10,
               }}
             />
@@ -371,9 +396,9 @@ const SingleProduct = () => {
             <AddIcon
               style={{
                 fontSize: 15,
-                color: "#5e5e5e",
+                color: '#5e5e5e',
                 borderRadius: 50,
-                boxShadow: "0 2px 5px 0 rgba(0 0 0 / 20%)",
+                boxShadow: '0 2px 5px 0 rgba(0 0 0 / 20%)',
                 marginRight: 10,
               }}
             />
@@ -383,9 +408,9 @@ const SingleProduct = () => {
             <AddIcon
               style={{
                 fontSize: 15,
-                color: "#5e5e5e",
+                color: '#5e5e5e',
                 borderRadius: 50,
-                boxShadow: "0 2px 5px 0 rgba(0 0 0 / 20%)",
+                boxShadow: '0 2px 5px 0 rgba(0 0 0 / 20%)',
                 marginRight: 10,
               }}
             />
@@ -394,7 +419,11 @@ const SingleProduct = () => {
           <Fees style={{ marginTop: 20 }}>
             Total Savings: $3,695
             <InfoOutlinedIcon
-              style={{ fontSize: 20, color: "#1492e6", marginLeft: 5 }}
+              style={{
+                fontSize: 20,
+                color: '#1492e6',
+                marginLeft: 5,
+              }}
             />
           </Fees>
           <Submit>START NOW</Submit>
@@ -402,56 +431,86 @@ const SingleProduct = () => {
       </ProductSection>
       <KeyFeatures>
         <Hide>HIDE</Hide>
-        <Title style={{ fontSize: 20, fontWeight: 500, color: "#747474" }}>
+        <Title
+          style={{
+            fontSize: 20,
+            fontWeight: 500,
+            color: '#747474',
+          }}
+        >
           Key Features
         </Title>
         <FeaturesContent>
           <Features>
-            <SettingsIcon style={{ marginRight: 5, color: "#373737" }} />
+            <SettingsIcon
+              style={{ marginRight: 5, color: '#373737' }}
+            />
             2.5L /4 CYL.
           </Features>
           <Features>
-            <SettingsIcon style={{ marginRight: 5, color: "#373737" }} />
+            <SettingsIcon
+              style={{ marginRight: 5, color: '#373737' }}
+            />
             2.5L /4 CYL.
           </Features>
           <Features>
-            <SettingsIcon style={{ marginRight: 5, color: "#373737" }} />
+            <SettingsIcon
+              style={{ marginRight: 5, color: '#373737' }}
+            />
             2.5L /4 CYL.
           </Features>
           <Features>
-            <SettingsIcon style={{ marginRight: 5, color: "#373737" }} />
+            <SettingsIcon
+              style={{ marginRight: 5, color: '#373737' }}
+            />
             2.5L /4 CYL.
           </Features>
           <Features>
-            <SettingsIcon style={{ marginRight: 5, color: "#373737" }} />
+            <SettingsIcon
+              style={{ marginRight: 5, color: '#373737' }}
+            />
             2.5L /4 CYL.
           </Features>
           <Features>
-            <SettingsIcon style={{ marginRight: 5, color: "#373737" }} />
+            <SettingsIcon
+              style={{ marginRight: 5, color: '#373737' }}
+            />
             2.5L /4 CYL.
           </Features>
           <Features>
-            <SettingsIcon style={{ marginRight: 5, color: "#373737" }} />
+            <SettingsIcon
+              style={{ marginRight: 5, color: '#373737' }}
+            />
             2.5L /4 CYL.
           </Features>
           <Features>
-            <SettingsIcon style={{ marginRight: 5, color: "#373737" }} />
+            <SettingsIcon
+              style={{ marginRight: 5, color: '#373737' }}
+            />
             2.5L /4 CYL.
           </Features>
           <Features>
-            <SettingsIcon style={{ marginRight: 5, color: "#373737" }} />
+            <SettingsIcon
+              style={{ marginRight: 5, color: '#373737' }}
+            />
             2.5L /4 CYL.
           </Features>
           <Features>
-            <SettingsIcon style={{ marginRight: 5, color: "#373737" }} />
+            <SettingsIcon
+              style={{ marginRight: 5, color: '#373737' }}
+            />
             2.5L /4 CYL.
           </Features>
           <Features>
-            <SettingsIcon style={{ marginRight: 5, color: "#373737" }} />
+            <SettingsIcon
+              style={{ marginRight: 5, color: '#373737' }}
+            />
             2.5L /4 CYL.
           </Features>
           <Features>
-            <SettingsIcon style={{ marginRight: 5, color: "#373737" }} />
+            <SettingsIcon
+              style={{ marginRight: 5, color: '#373737' }}
+            />
             2.5L /4 CYL.
           </Features>
         </FeaturesContent>
@@ -469,48 +528,63 @@ const SingleProduct = () => {
               <FeaturesText>
                 <h1>Exterior</h1>
                 <span>Aluminum Spare Wheel</span>
-                <span>Body-Colored Front Bumper w/1 Tow Hook</span>
                 <span>
-                  Body-Colored Power Heated Side Mirrors w/Power Folding and
-                  Turn Signal Indicator
+                  Body-Colored Front Bumper w/1 Tow Hook
                 </span>
-                <span>Body-Colored Rear Step Bumper w/1 Tow Hook</span>
+                <span>
+                  Body-Colored Power Heated Side Mirrors w/Power
+                  Folding and Turn Signal Indicator
+                </span>
+                <span>
+                  Body-Colored Rear Step Bumper w/1 Tow Hook
+                </span>
                 <span>Chrome Door Handles</span>
                 <span>Chrome Grille</span>
                 <span>
-                  Chrome Side Windows Trim and Black Front Windshield Trim
+                  Chrome Side Windows Trim and Black Front
+                  Windshield Trim
                 </span>
                 <span>Clearcoat Paint</span>
               </FeaturesText>
               <FeaturesText>
                 <h1>Interior</h1>
                 <span>Aluminum Spare Wheel</span>
-                <span>Body-Colored Front Bumper w/1 Tow Hook</span>
                 <span>
-                  Body-Colored Power Heated Side Mirrors w/Power Folding and
-                  Turn Signal Indicator
+                  Body-Colored Front Bumper w/1 Tow Hook
                 </span>
-                <span>Body-Colored Rear Step Bumper w/1 Tow Hook</span>
+                <span>
+                  Body-Colored Power Heated Side Mirrors w/Power
+                  Folding and Turn Signal Indicator
+                </span>
+                <span>
+                  Body-Colored Rear Step Bumper w/1 Tow Hook
+                </span>
                 <span>Chrome Door Handles</span>
                 <span>Chrome Grille</span>
                 <span>
-                  Chrome Side Windows Trim and Black Front Windshield Trim
+                  Chrome Side Windows Trim and Black Front
+                  Windshield Trim
                 </span>
                 <span>Clearcoat Paint</span>
               </FeaturesText>
               <FeaturesText>
                 <h1>Interior</h1>
                 <span>Aluminum Spare Wheel</span>
-                <span>Body-Colored Front Bumper w/1 Tow Hook</span>
                 <span>
-                  Body-Colored Power Heated Side Mirrors w/Power Folding and
-                  Turn Signal Indicator
+                  Body-Colored Front Bumper w/1 Tow Hook
                 </span>
-                <span>Body-Colored Rear Step Bumper w/1 Tow Hook</span>
+                <span>
+                  Body-Colored Power Heated Side Mirrors w/Power
+                  Folding and Turn Signal Indicator
+                </span>
+                <span>
+                  Body-Colored Rear Step Bumper w/1 Tow Hook
+                </span>
                 <span>Chrome Door Handles</span>
                 <span>Chrome Grille</span>
                 <span>
-                  Chrome Side Windows Trim and Black Front Windshield Trim
+                  Chrome Side Windows Trim and Black Front
+                  Windshield Trim
                 </span>
                 <span>Clearcoat Paint</span>
               </FeaturesText>

@@ -1,4 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+
+interface MenuProps {
+  dropdown?: boolean;
+}
 
 export const Container = styled.div`
   position: relative;
@@ -31,7 +35,11 @@ export const Toggle = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: flex-end;
-  background-image: linear-gradient(to right, #1492e6 25%, #1deea1);
+  background-image: linear-gradient(
+    to right,
+    #1492e6 25%,
+    #1deea1
+  );
   border-radius: 0 0 20px 20px;
   font-family: Poppins, sans-serif;
   font-weight: 500;
@@ -55,9 +63,9 @@ export const IconsList = styled.div`
   align-items: center;
 `;
 
-export const Menu = styled.div`
+export const Menu = styled.div<MenuProps>`
   position: absolute;
-  display: flex;
+  display: ${props => (props.dropdown ? 'flex' : 'none')};
   top: 0;
   left: 0;
   width: 100px;

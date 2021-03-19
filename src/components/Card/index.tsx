@@ -1,15 +1,15 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
-// import FavoriteIcon from "@material-ui/icons/Favorite";
-import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
-import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
-// import { ModalFeatures, ModalSavings } from "../CardModal";
+import {
+  FavoriteBorder as FavoriteBorderIcon,
+  AddCircleOutline as AddCircleOutlineIcon,
+  InfoOutlined as InfoOutlinedIcon,
+} from '@material-ui/icons';
 
-import "./styles.css";
+import './styles.css';
 
-interface Props {
+interface CardProps {
   vehicleVIN: string;
   vechileName: string;
   vehicleYear: number;
@@ -26,7 +26,7 @@ interface Props {
   leaseToFinance: boolean;
 }
 
-const CardVechile: React.FC<Props> = ({
+const CardVechile: React.FC<CardProps> = ({
   vehicleVIN,
   vechileName,
   vehicleYear,
@@ -55,10 +55,10 @@ const CardVechile: React.FC<Props> = ({
           <FavoriteBorderIcon
             style={{
               fontSize: 35,
-              color: "#1492e6",
+              color: '#1492e6',
               padding: 5,
               borderRadius: 50,
-              boxShadow: "0 2px 5px 0 rgba(0 0 0 / 10%)",
+              boxShadow: '0 2px 5px 0 rgba(0 0 0 / 10%)',
             }}
           />
         </div>
@@ -76,7 +76,9 @@ const CardVechile: React.FC<Props> = ({
               className="interiorColor"
             ></div>
           </div>
-          <InfoOutlinedIcon style={{ fontSize: 19, color: "#999999" }} />
+          <InfoOutlinedIcon
+            style={{ fontSize: 19, color: '#999999' }}
+          />
         </div>
       </div>
       <div className="vehicleInfo">
@@ -85,15 +87,15 @@ const CardVechile: React.FC<Props> = ({
           <span className="info">Down</span>
         </div>
         <div className="month">
-          {!leaseToFinance ? (
-            <span className="value">
-              ${Math.round(Number(valueMonthFinance))}
-            </span>
-          ) : (
-            <span className="value">
-              ${Math.round(Number(valueMonthLease))}
-            </span>
-          )}
+          <span className="value">
+            {`$ ${Math.round(
+              Number(
+                leaseToFinance
+                  ? valueMonthLease
+                  : valueMonthFinance,
+              ),
+            )}`}
+          </span>
 
           <span className="info">/mo.</span>
         </div>
@@ -127,8 +129,6 @@ const CardVechile: React.FC<Props> = ({
           <span>Build My Deal</span>
         </Link>
       </div>
-      {/* <ModalFeatures />
-      <ModalSavings />*/}
     </div>
   );
 };
