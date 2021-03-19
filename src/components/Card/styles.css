@@ -1,0 +1,217 @@
+div.container {
+  position: relative;
+  width: 30%;
+  max-width: 360px;
+  min-height: 225px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px 0 rgba(0 0 0 / 10%);
+  padding: 15px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  font-family: Poppins, sans-serif;
+}
+
+div.vehicleHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.vehicleTitle .year {
+  font-size: 15px;
+  color: #1492e6;
+  font-weight: 500;
+}
+
+div.vehicleTitle .title {
+  font-size: 17px;
+  color: #171717;
+  font-weight: 500;
+}
+
+div.vehicleTitle .body {
+  font-size: 15px;
+  color: #171717;
+}
+
+div.vehicleImage {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  box-sizing: border-box;
+}
+
+div.vehicleImage img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 200px;
+}
+
+div.vehicleColor {
+  position: absolute;
+  bottom: 20px;
+  right: 3px;
+  width: 80px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  box-shadow: 0 2px 3px 0 rgba(0 0 0 / 10%);
+  box-sizing: border-box;
+}
+
+div.colors {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+  box-sizing: border-box;
+}
+
+div.exteriorColor {
+  width: 35px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50px;
+  margin-bottom: 3px;
+}
+
+div.interiorColor {
+  width: 35px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50px;
+}
+
+div.vehicleInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+div.vehicleInfo div.down,
+div.vehicleInfo div.month,
+div.vehicleInfo div.mpy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+}
+
+div.vehicleInfo div.month {
+  border-left: 1px solid rgba(55 55 55 / 30%);
+  border-right: 1px solid rgba(55 55 55 / 30%);
+}
+
+div.vehicleInfo div.down span.value,
+div.vehicleInfo div.month span.value,
+div.vehicleInfo div.mpy span.value {
+  color: #171717;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+div.vehicleInfo div.down span.info,
+div.vehicleInfo div.month span.info,
+div.vehicleInfo div.mpy span.info {
+  color: #373737;
+  font-size: 12px;
+}
+
+div.vehicleMsrp {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+div.msrp span.value,
+div.savings span.value {
+  color: #171717;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+div.vehicleFeatures {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+div.keyFeatures,
+div.viewSavings {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+div.keyFeatures span,
+div.viewSavings span {
+  margin-left: 5px;
+}
+
+div.vehicleSubmit {
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  padding: 10px 0;
+  border: none;
+  border-radius: 50px;
+  background-color: #1492e6;
+  /* background-image: linear-gradient(to right, #1a2980, #26d0ce); */
+  box-shadow: 0 2px 5px 0 rgba(0 0 0 / 10%);
+  margin-top: 20px;
+}
+
+div.vehicleSubmit a {
+  text-decoration: none;
+  color: white;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 900px) {
+}
+
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  div.container {
+    width: 45%;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 576px) {
+  div.container {
+    width: 48%;
+  }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+  div.container {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  div.container {
+    width: 100%;
+  }
+}

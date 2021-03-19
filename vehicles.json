@@ -1,0 +1,235 @@
+{
+  "limit": 10,
+  "count": 30,
+  "currentPage": 1,
+  "next": {
+    "page": 2,
+    "limit": 10
+  },
+  "results": [
+    {
+      "VIN": "2HGFC2F63LH567085",
+      "make": "HONDA",
+      "model": "CIVIC",
+      "year": 2020,
+      "msrp": 21755,
+      "inVoice": 20286,
+      "baseMSRPamount": 20800,
+      "shortDescription": "4D SEDAN 2.0L LX AUTO",
+      "lease": {},
+      "finance": {},
+      "image": {
+        "vifnum": 14054,
+        "id": 8414577,
+        "url": "https://dbhdyzvm8lm25.cloudfront.net/color_0640_032_png/MY2020/14054/14054_cc0640_032_GX.png",
+        "url_back": "https://dbhdyzvm8lm25.cloudfront.net/color_0640_014_png/MY2020/14054/14054_cc0640_014_GX.png",
+        "url_side": "https://dbhdyzvm8lm25.cloudfront.net/color_0640_001_png/MY2020/14054/14054_cc0640_001_GX.png",
+        "code": "GX",
+        "title": "Modern Steel Metallic",
+        "rgb": "444550"
+      },
+      "exteriorRgb": {
+        "color": "Steel",
+        "rgb": "#444550"
+      },
+      "exteriorColor": "Modern Steel Metalli",
+      "interiorColor": "Gray"
+    },
+    {
+      "VIN": "2HGFC2F87MH509080",
+      "make": "HONDA",
+      "model": "CIVIC",
+      "year": 2020,
+      "msrp": 23805,
+      "inVoice": 22185,
+      "baseMSRPamount": 22850,
+      "shortDescription": "4D SEDAN 2.0L SPORT AUTO",
+      "lease": {},
+      "finance": {},
+      "image": {
+        "vifnum": 14053,
+        "id": 8414564,
+        "url": "https://dbhdyzvm8lm25.cloudfront.net/color_0640_032_png/MY2020/14053/14053_cc0640_032_RE.png",
+        "url_back": "https://dbhdyzvm8lm25.cloudfront.net/color_0640_014_png/MY2020/14053/14053_cc0640_014_RE.png",
+        "url_side": "https://dbhdyzvm8lm25.cloudfront.net/color_0640_001_png/MY2020/14053/14053_cc0640_001_RE.png",
+        "code": "RE",
+        "title": "Rallye Red",
+        "rgb": "C81E21"
+      },
+      "exteriorRgb": {
+        "color": "Red",
+        "rgb": "#FF0000"
+      },
+      "exteriorColor": "Rallye Red",
+      "interiorColor": "Black"
+    },
+    {
+      "VIN": "19XFC1F35LE024508",
+      "make": "HONDA",
+      "model": "CIVIC",
+      "year": 2020,
+      "msrp": 24905,
+      "inVoice": 23202,
+      "baseMSRPamount": 23950,
+      "shortDescription": "4D SEDAN 1.5T EX AUTO",
+      "lease": {},
+      "finance": {},
+      "exteriorRgb": {
+        "color": "Silver",
+        "rgb": "#C0C0C0"
+      },
+      "exteriorColor": "Lunar Silver Mettali",
+      "interiorColor": "Black"
+    },
+    {
+      "VIN": "19XFC1F71ME001182",
+      "make": "HONDA",
+      "model": "CIVIC",
+      "year": 2020,
+      "msrp": 26750,
+      "inVoice": 24913,
+      "baseMSRPamount": 25400,
+      "shortDescription": "4D SEDAN 1.5T EX-L AUTO",
+      "lease": {},
+      "finance": {},
+      "image": {
+        "vifnum": 14188,
+        "id": 8415678,
+        "url": "https://dbhdyzvm8lm25.cloudfront.net/color_0640_032_png/MY2020/14188/14188_cc0640_032_WX.png",
+        "url_back": "https://dbhdyzvm8lm25.cloudfront.net/color_0640_014_png/MY2020/14188/14188_cc0640_014_WX.png",
+        "url_side": "https://dbhdyzvm8lm25.cloudfront.net/color_0640_001_png/MY2020/14188/14188_cc0640_001_WX.png",
+        "code": "WX",
+        "title": "Platinum White Pearl",
+        "rgb": "EAE9E7"
+      },
+      "exteriorRgb": {
+        "color": "White",
+        "rgb": "#FFFFFF"
+      },
+      "exteriorColor": "Platinum White Pearl",
+      "interiorColor": "Black"
+    },
+    {
+      "VIN": "1HGCV1F10MA008296",
+      "make": "HONDA",
+      "model": "ACCORD",
+      "year": 2021,
+      "msrp": 25725,
+      "inVoice": 24572,
+      "baseMSRPamount": 24770,
+      "shortDescription": "4D SEDAN 1.5T LX AUTO",
+      "lease": {},
+      "finance": {},
+      "image": false,
+      "exteriorRgb": {
+        "color": "black",
+        "rgb": "#000000"
+      },
+      "exteriorColor": "Still Night Black",
+      "interiorColor": "Black"
+    },
+    {
+      "VIN": "1HGCV1F35MA001071",
+      "make": "HONDA",
+      "model": "ACCORD",
+      "year": 2021,
+      "msrp": 28580,
+      "inVoice": 26862,
+      "baseMSRPamount": 27230,
+      "shortDescription": "4D SEDAN 1.5T SPORT AUTO",
+      "lease": {},
+      "finance": {},
+      "image": false,
+      "exteriorRgb": {
+        "color": "Silver",
+        "rgb": "#C0C0C0"
+      },
+      "exteriorColor": "Lunar Silver Mettali",
+      "interiorColor": "Black"
+    },
+    {
+      "VIN": "1HGCV1F48MA006080",
+      "make": "HONDA",
+      "model": "ACCORD",
+      "year": 2021,
+      "msrp": 29675,
+      "inVoice": 27886,
+      "baseMSRPamount": 28720,
+      "shortDescription": "4D SEDAN 1.5T SPORT SE AUTO",
+      "lease": {},
+      "finance": {},
+      "image": {
+        "vifnum": 14785,
+        "id": 8423475,
+        "url": "https://dbhdyzvm8lm25.cloudfront.net/color_0640_032_png/MY2021/14785/14785_cc0640_032_WX.png",
+        "url_back": "https://dbhdyzvm8lm25.cloudfront.net/color_0640_014_png/MY2021/14785/14785_cc0640_014_WX.png",
+        "url_side": "https://dbhdyzvm8lm25.cloudfront.net/color_0640_001_png/MY2021/14785/14785_cc0640_001_WX.png",
+        "code": "WX",
+        "title": "Platinum White Pearl",
+        "rgb": "CFCBC5"
+      },
+      "exteriorRgb": {
+        "color": "White",
+        "rgb": "#FFFFFF"
+      },
+      "exteriorColor": "Platinum White Pearl",
+      "interiorColor": "Black"
+    },
+    {
+      "VIN": "1HGCV1F59MA027349",
+      "make": "HONDA",
+      "model": "ACCORD",
+      "year": 2021,
+      "msrp": 32045,
+      "inVoice": 30104,
+      "baseMSRPamount": 31090,
+      "shortDescription": "4D SEDAN 1.5T EX-L AUTO",
+      "lease": {},
+      "finance": {},
+      "exteriorRgb": {
+        "color": "black",
+        "rgb": "#000000"
+      },
+      "exteriorColor": "Crystal Black Peral",
+      "interiorColor": "Black"
+    },
+    {
+      "VIN": "2HKRW1H21MH401910",
+      "make": "HONDA",
+      "model": "CR-V",
+      "year": 2021,
+      "msrp": 26470,
+      "inVoice": 25288,
+      "baseMSRPamount": 25350,
+      "shortDescription": "5D WAGON LX 2WD",
+      "lease": {},
+      "finance": {},
+      "image": false,
+      "exteriorRgb": {
+        "color": "black",
+        "rgb": "#000000"
+      },
+      "exteriorColor": "Crystal Black Peral",
+      "interiorColor": "Black"
+    },
+    {
+      "VIN": "2HKRW1H58MH404393",
+      "make": "HONDA",
+      "model": "CR-V",
+      "year": 2021,
+      "msrp": 28980,
+      "inVoice": 27246,
+      "baseMSRPamount": 27860,
+      "shortDescription": "5D WAGON EX 2WD",
+      "lease": {},
+      "finance": {},
+      "image": false,
+      "exteriorRgb": {
+        "color": "black",
+        "rgb": "#000000"
+      },
+      "exteriorColor": "Crystal Black Peral",
+      "interiorColor": "Black"
+    }
+  ]
+}

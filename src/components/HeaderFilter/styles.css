@@ -1,0 +1,645 @@
+div.filterContent {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+}
+
+div.termContent {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+div.search,
+div.term,
+div.mileage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-right: 15px;
+}
+
+div.search span,
+div.term span,
+div.mileage span {
+  font-size: 13px;
+  color: #5e5e5e;
+  margin-bottom: 10px;
+}
+
+div.search input,
+div.term input,
+div.mileage input {
+  font-size: 17px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px 0 rgba(0 0 0 / 10%);
+  padding: 5px 10px;
+}
+
+div.search input::placeholder,
+div.term input::placeholder,
+div.mileage input::placeholder {
+  font-size: 15px;
+  opacity: 0.5;
+}
+
+div.search select,
+div.term select,
+div.mileage select {
+  font-size: 17px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px 0 rgba(0 0 0 / 10%);
+  padding: 5px 10px;
+}
+
+div.moreFilters {
+  display: none;
+}
+
+div.toggleButton {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+div.toggleButton label.switchToggle {
+  position: relative;
+  display: inline-block;
+  width: 193px;
+  height: 35px;
+}
+label.switchToggle input.buttonToggle {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+label.switchToggle span.lease,
+label.switchToggle span.finance {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  border: none;
+  border-radius: 50px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+label.switchToggle span.lease:before {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  content: "Lease";
+  height: 28px;
+  width: 100px;
+  left: 5px;
+  bottom: 3px;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  padding-top: 1px;
+  background-color: #1492e6;
+  /* background-image: linear-gradient(to right, #1a2980 25%, #26d0ce); */
+  border-radius: 50px;
+  z-index: 1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+label.switchToggle span.finance:before {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  content: "Finance";
+  height: 28px;
+  width: 100px;
+  left: 0;
+  bottom: 3px;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  padding-top: 1px;
+  background-color: #1492e6;
+  /* background-image: linear-gradient(to right, #1a2980 25%, #26d0ce); */
+  border-radius: 50px;
+  z-index: 1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+label.switchToggle span.finance:after {
+  position: absolute;
+  content: "Lease";
+  left: 30px;
+  bottom: 10px;
+  color: #5e5e5e;
+  font-size: 14px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+label.switchToggle span.lease:after {
+  position: absolute;
+  content: "Finance";
+  right: 20px;
+  bottom: 10px;
+  color: #5e5e5e;
+  font-size: 14px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+input.financeIn {
+  content: "finance";
+}
+input.leaseIn {
+  content: "lease";
+}
+
+input.buttonToggle + span.lease,
+input.buttonToggle + span.finance {
+  box-shadow: 0 2px 5px 0 rgba(0 0 0 / 15%);
+}
+input.buttonToggle:checked + span.lease:before,
+input.buttonToggle:checked + span.finance:before {
+  -webkit-transform: translateX(88px);
+  -ms-transform: translateX(88px);
+  transform: translateX(88px);
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1100px) {
+  div.filterContent {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+  }
+
+  div.termContent {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  div.search,
+  div.term,
+  div.mileage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+  div.search span,
+  div.term span,
+  div.mileage span {
+    display: none;
+  }
+
+  div.search input,
+  div.term input,
+  div.mileage input {
+    width: 95%;
+    font-size: 17px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0 0 0 / 10%);
+    padding: 5px 10px;
+  }
+
+  div.search input::placeholder,
+  div.term input::placeholder,
+  div.mileage input::placeholder {
+    font-size: 15px;
+    opacity: 0.5;
+  }
+
+  div.search select,
+  div.term select,
+  div.mileage select {
+    width: 95%;
+    font-size: 17px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0 0 0 / 10%);
+    padding: 5px 10px;
+  }
+
+  div.moreFilters {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0 0 0 / 10%);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+  div.toggleButton {
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  div.filterContent {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+  }
+
+  div.termContent {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  div.search,
+  div.term,
+  div.mileage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+  div.search span,
+  div.term span,
+  div.mileage span {
+    display: none;
+  }
+
+  div.search input,
+  div.term input,
+  div.mileage input {
+    width: 95%;
+    font-size: 17px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0 0 0 / 10%);
+    padding: 5px 10px;
+  }
+
+  div.search input::placeholder,
+  div.term input::placeholder,
+  div.mileage input::placeholder {
+    font-size: 15px;
+    opacity: 0.5;
+  }
+
+  div.search select,
+  div.term select,
+  div.mileage select {
+    width: 95%;
+    font-size: 17px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0 0 0 / 10%);
+    padding: 5px 10px;
+  }
+
+  div.moreFilters {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0 0 0 / 10%);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+  div.toggleButton {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  div.filterContent {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+  }
+
+  div.termContent {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  div.search,
+  div.term,
+  div.mileage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+  div.search span,
+  div.term span,
+  div.mileage span {
+    display: none;
+  }
+
+  div.search input,
+  div.term input,
+  div.mileage input {
+    width: 95%;
+    font-size: 17px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0 0 0 / 10%);
+    padding: 5px 10px;
+  }
+
+  div.search input::placeholder,
+  div.term input::placeholder,
+  div.mileage input::placeholder {
+    font-size: 15px;
+    opacity: 0.5;
+  }
+
+  div.search select,
+  div.term select,
+  div.mileage select {
+    width: 95%;
+    font-size: 17px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0 0 0 / 10%);
+    padding: 5px 10px;
+  }
+
+  div.moreFilters {
+    width: 98%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0 0 0 / 10%);
+    border-radius: 10px;
+  }
+
+  div.toggleButton {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 576px) {
+  div.filterContent {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+  }
+
+  div.termContent {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  div.search,
+  div.term,
+  div.mileage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+  div.search span,
+  div.term span,
+  div.mileage span {
+    display: none;
+  }
+
+  div.search input,
+  div.term input,
+  div.mileage input {
+    width: 95%;
+    font-size: 17px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0 0 0 / 10%);
+    padding: 5px 10px;
+  }
+
+  div.search input::placeholder,
+  div.term input::placeholder,
+  div.mileage input::placeholder {
+    font-size: 15px;
+    opacity: 0.5;
+  }
+
+  div.search select,
+  div.term select,
+  div.mileage select {
+    width: 95%;
+    font-size: 17px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0 0 0 / 10%);
+    padding: 5px 10px;
+  }
+
+  div.moreFilters {
+    width: 98%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0 0 0 / 10%);
+    border-radius: 10px;
+  }
+
+  div.toggleButton {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+  div.filterContent {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  div.termContent {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  div.search,
+  div.term,
+  div.mileage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+  div.search span,
+  div.term span,
+  div.mileage span {
+    display: none;
+  }
+
+  div.search input,
+  div.term input,
+  div.mileage input {
+    width: 100%;
+    font-size: 17px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0 0 0 / 10%);
+    padding: 5px 10px;
+  }
+
+  div.search input::placeholder,
+  div.term input::placeholder,
+  div.mileage input::placeholder {
+    font-size: 15px;
+    opacity: 0.5;
+  }
+
+  div.search select,
+  div.term select,
+  div.mileage select {
+    width: 100%;
+    font-size: 17px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0 0 0 / 10%);
+    padding: 5px 10px;
+  }
+
+  div.moreFilters {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0 0 0 / 10%);
+    border-radius: 10px;
+  }
+
+  div.toggleButton {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  div.filterContent {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  div.termContent {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  div.search,
+  div.term,
+  div.mileage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+  div.search span,
+  div.term span,
+  div.mileage span {
+    display: none;
+  }
+
+  div.search input,
+  div.term input,
+  div.mileage input {
+    width: 100%;
+    font-size: 17px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0 0 0 / 10%);
+    padding: 5px 10px;
+  }
+
+  div.search input::placeholder,
+  div.term input::placeholder,
+  div.mileage input::placeholder {
+    font-size: 15px;
+    opacity: 0.5;
+  }
+
+  div.search select,
+  div.term select,
+  div.mileage select {
+    width: 100%;
+    font-size: 17px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0 0 0 / 10%);
+    padding: 5px 10px;
+  }
+
+  div.moreFilters {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0 0 0 / 10%);
+    border-radius: 10px;
+  }
+
+  div.toggleButton {
+    display: none;
+  }
+}

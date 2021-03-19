@@ -1,0 +1,85 @@
+.carousel .slide {
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel .control-dots {
+  left: 15px;
+  width: 15%;
+  background-color: white;
+  border-radius: 50px;
+  padding: 10px;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 10%);
+  box-sizing: border-box;
+}
+
+.carousel .control-dots .dot {
+  width: 20px;
+  height: 20px;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 25%);
+  /* background: #1deea1; */
+}
+
+.carousel .control-dots .dot.selected {
+  background-color: #1492e6;
+}
+
+.carousel img {
+  width: 80%; /* responsivo da imagem aqui */
+}
+
+div.toggleButton {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.MuiTabs-root {
+  width: 100%;
+  border-radius: 50px;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 10%);
+  border: 5px solid rgba(116 116 116 / 5%);
+  min-height: 65px !important;
+  z-index: 5;
+}
+
+.MuiTabPanel-root {
+  padding: 30px 10px 10px 10px !important;
+}
+
+.MuiTabs-flexContainer {
+  width: 100%;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+
+.MuiTab-textColorInherit {
+  color: #373737 !important;
+  font-family: Poppins, sans-serif !important;
+  border-radius: 50px !important;
+  transition: all 0.4s !important;
+}
+
+.MuiTab-textColorInherit.Mui-selected {
+  z-index: 5 !important;
+  color: white !important;
+  font-weight: 500 !important;
+  font-family: Poppins, sans-serif !important;
+}
+
+.MuiTabs-indicator {
+  bottom: 15% !important;
+  height: 40px !important;
+  border-radius: 50px !important;
+  background-color: #1492e6 !important;
+  z-index: 1;
+}
+
+.MuiTabPanel-root {
+  width: 100%;
+}

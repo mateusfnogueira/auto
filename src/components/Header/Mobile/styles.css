@@ -1,0 +1,115 @@
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+  div.toggleButtonMobile {
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-bottom: 5px;
+  }
+  div.toggleButtonMobile label.switchToggleMobile {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 35px;
+  }
+  label.switchToggleMobile input.buttonToggleMobile {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  label.switchToggleMobile span.lease,
+  label.switchToggleMobile span.finance {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    border: none;
+    border-radius: 50px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  label.switchToggleMobile span.lease:before {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    content: "Lease";
+    height: 28px;
+    width: 100px;
+    left: 5px;
+    bottom: 3px;
+    color: #373737;
+    text-align: center;
+    font-size: 14px;
+    padding-top: 1px;
+    background-color: white;
+    /* background-image: linear-gradient(to right, #1a2980 25%, #26d0ce); */
+    border-radius: 50px;
+    z-index: 1;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  label.switchToggleMobile span.finance:before {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    content: "Finance";
+    height: 28px;
+    width: 100px;
+    left: 0;
+    bottom: 3px;
+    color: #373737;
+    text-align: center;
+    font-size: 14px;
+    padding-top: 1px;
+    background-color: white;
+    /* background-image: linear-gradient(to right, #1a2980 25%, #26d0ce); */
+    border-radius: 50px;
+    z-index: 1;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  label.switchToggleMobile span.finance:after {
+    position: absolute;
+    content: "Lease";
+    left: 30px;
+    bottom: 10px;
+    color: white;
+    font-size: 14px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  label.switchToggleMobile span.lease:after {
+    position: absolute;
+    content: "Finance";
+    right: 10px;
+    bottom: 10px;
+    color: white;
+    font-size: 14px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  input.financeIn {
+    content: "finance";
+  }
+  input.leaseIn {
+    content: "lease";
+  }
+
+  /* input.buttonToggleMobile + span.lease,
+              input.buttonToggleMobile + span.finance {
+                box-shadow: 0 2px 5px 0 rgba(0 0 0 / 15%);
+              } */
+
+  input.buttonToggleMobile:checked + span.lease:before,
+  input.buttonToggleMobile:checked + span.finance:before {
+    -webkit-transform: translateX(88px);
+    -ms-transform: translateX(88px);
+    transform: translateX(88px);
+  }
+}

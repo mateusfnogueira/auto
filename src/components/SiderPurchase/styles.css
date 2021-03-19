@@ -1,0 +1,120 @@
+h1.sectionTitle {
+  font-size: 17px;
+  color: #5e5e5e;
+  margin-bottom: 10px;
+}
+
+h1.sectionTitle svg {
+  display: none;
+}
+
+div.purchaseOpt {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+div.purchaseOpt span.cash,
+div.purchaseOpt span.finance,
+div.purchaseOpt span.lease {
+  font-size: 17px;
+  font-weight: 500;
+  color: #171717;
+}
+
+div.cashContent,
+div.financeContent,
+div.leaseContent {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+div.cashContent div.cashMinContent,
+div.cashContent div.cashMaxContent,
+div.financeContent div.financeMinContent,
+div.financeContent div.financeMaxContent,
+div.leaseContent div.leaseMinContent,
+div.leaseContent div.leaseMaxContent {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+div.cashContent div.cashMinContent span,
+div.cashContent div.cashMaxContent span,
+div.financeContent div.financeMinContent span,
+div.financeContent div.financeMaxContent span,
+div.leaseContent div.leaseMinContent span,
+div.leaseContent div.leaseMaxContent span {
+  font-size: 12px;
+  color: #5e5e5e;
+}
+
+div.cashContent select,
+div.financeContent select,
+div.leaseContent select {
+  width: 100%;
+  font-size: 14px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px 0 rgba(0 0 0 / 10%);
+  padding: 5px 10px;
+}
+
+div.rangeCashContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+div.rangeCashContent span.rangeCashTitle {
+  width: 100%;
+  text-align: left;
+}
+
+div.rangeCashContent div.rangeIcons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+
+@media only screen and (min-width: 321px) and (max-width: 1100px) {
+  h1.sectionTitle {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  h1.sectionTitle svg {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  h1.sectionTitle {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  h1.sectionTitle svg {
+    display: block;
+  }
+}
